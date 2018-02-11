@@ -37,5 +37,25 @@
         </div>
       </div>
     </div>
+    
+    <script>
+      const mainClick = document.getElementById("main");
+ 
+      mainClick.addEventListener ("click", function(e) {
+        alert ("I was clicked!");
+      })
+      
+      const input = document.querySelector ("input");
+      
+      input.addEventListener ("keydown", function(e){
+        if (e.which > 47 && e.which < 58) {
+          console.log("You pressed the number \"" + String.fromCharCode(e.which) + "\". The ID for it is: " + e.which);
+        } else if (e.which > 64 && e.which < 91) {
+          console.log("You pressed the letter \"" + String.fromCharCode(e.which) + "\". The ID for it is: " + e.which);
+        } else {
+          console.log("A key has been pressed.");
+        }
+      })
+    </script>
   </body>
 </html>
